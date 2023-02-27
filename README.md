@@ -1,4 +1,5 @@
 # AIR_QUALITY_WEBPORTAL
+We have used OPENAQ_API to retrieve air quality of different cities 
 
 STEPS TO BE FOLLOWED TO DEVELOP THE WEB PORTAL
 

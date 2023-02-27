@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>No Air Quality Data Found</title>
+    <style>
+        body {
+         
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+        }
+        body
+        {
+          padding: 300px;
+          padding-left:center;
+          background-color: #fcfcfc;  
+        }
+        .center-div
+        {
+          margin: 0 auto;
+          max-width: 700px;
+          height: 100px;
+         
+          border-radius: 3px;
+        }
+        .center
+        {
+          margin: 0 auto;
+          max-width: 700px;
+          height: 50px;
+         
+          border-radius: 3px;
+        }
+        </style>  
+</head>
+<body background="../static/images/3.jfif">
+    <marquee direction="right" class="center" 
+    behavior="alternate" > <h2>AIR QUALITY OF CITY {{ city }}</h2></marquee>
+    <h1>Air Quality Data for {{ city }}</h1>
+    <div class="center-div">
+    <h1>No air quality data was found for {{ city }}</h1>
+    <p>Please try searching for another city.</p>
+    </div>
+</body>
+</html>

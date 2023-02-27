@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Quality Results</title>
+    <style>
+        body {
+         
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+        }
+        body
+        {
+          padding: 300px;
+          padding-left:center;
+          background-color: #fcfcfc;  
+        }
+        .center-div
+        {
+          margin: 0 auto;
+          max-width: 700px;
+          height: 100px;
+         
+          border-radius: 3px;
+        }
+        .center
+        {
+          margin: 0 auto;
+          max-width: 700px;
+          height: 50px;
+         
+          border-radius: 3px;
+        }
+        </style>  
+</head>
+<body background="../static/images/3.jfif">
+    <marquee direction="right" class="center" 
+    behavior="alternate" > <h2>AIR QUALITY OF CITY {{ city }}</h2></marquee>
+    <h1>Air Quality Data for {{ city }}</h1>
+<div class="center-div">
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+                <th>Unit</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.parameter }}</td>
+                <td>{{ result.value }}</td>
+                <td>{{ result.unit }}</td>
+                <td>{{ result.lastUpdated }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
